@@ -14,12 +14,15 @@ function copyUrl() {
 `oecd-mcp` is a **remote MCP server**. Add it once to your AI assistant, then ask
 questions in plain language. No installation, no code.
 
-<div class="url-box">
-  <code>{{ mcpUrl }}</code>
-  <button class="copy-btn" @click="copyUrl">{{ copied ? '✓ Copied' : '📋 Copy URL' }}</button>
+<div class="endpoint">
+  <div class="endpoint-head">Paste this address into your AI assistant</div>
+  <div class="endpoint-body">
+    <code class="endpoint-url">{{ mcpUrl }}</code>
+    <button class="endpoint-copy" @click="copyUrl">{{ copied ? 'Copied ✓' : 'Copy' }}</button>
+  </div>
 </div>
 
-<p class="url-note">Adding a connector is a standard action — see <a href="/guide/what-is-mcp">what MCP is</a> and why it's safe.</p>
+<p class="endpoint-note">Adding a connector is a standard, safe action — <a href="/guide/what-is-mcp">here's what MCP is</a>.</p>
 
 ## Add it to your assistant
 
