@@ -1,0 +1,262 @@
+/* =========================================================
+   1. Tailwind
+   ========================================================= */
+
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* =========================================================
+   2. Design tokens
+   ========================================================= */
+
+@theme {
+    --radius: 0.625rem;
+    --color-background: oklch(1 0 0);
+    --color-foreground: oklch(0.145 0 0);
+    --color-muted-foreground: oklch(0.556 0 0);
+    --color-border: oklch(0.922 0 0);
+    --color-card: oklch(1 0 0);
+    --color-secondary: oklch(0.97 0 0);
+    --color-primary: oklch(0.205 0 0);
+    --color-brand: oklch(0.57 0.22 261.45);
+    --color-brand-foreground: oklch(0.985 0 0);
+    --color-accent: oklch(0.97 0 0);
+
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+
+    --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "Geist Mono", ui-monospace, monospace;
+    --font-serif: "Instrument Serif", Georgia, serif;
+}
+
+/* =========================================================
+   3. Dark mode
+   ========================================================= */
+
+.dark {
+    --color-background: oklch(0.145 0 0);
+    --color-foreground: oklch(0.985 0 0);
+    --color-muted-foreground: oklch(0.708 0 0);
+    --color-border: oklch(1 0 0 / 10%);
+    --color-card: oklch(0.205 0 0);
+    --color-secondary: oklch(0.269 0 0);
+    --color-primary: oklch(0.922 0 0);
+
+    --color-accent: oklch(0.269 0 0);
+}
+
+/* =========================================================
+   4. Fonts
+   ========================================================= */
+
+/* @font-face ... */
+
+/* =========================================================
+   5. VitePress design-system bridge
+   ========================================================= */
+
+:root {
+    --vp-c-bg: var(--color-background);
+    --vp-c-bg-soft: var(--color-secondary);
+
+    --vp-c-text-1: var(--color-foreground);
+    --vp-c-text-2: var(--color-muted-foreground);
+
+    --vp-c-border: var(--color-border);
+
+    --vp-c-brand-1: var(--color-brand);
+    --vp-c-brand-2: var(--color-brand);
+    --vp-c-brand-3: var(--color-brand);
+
+    --vp-font-family-base: var(--font-sans);
+    --vp-font-family-mono: var(--font-mono);
+}
+
+/* =========================================================
+   6. VitePress-specific overrides
+   ========================================================= */
+
+/* Navbar */
+.Layout .VPNav .VPNavBarTitle.has-sidebar .title {
+    border-bottom-color: transparent;
+}
+
+/* End Navbar */
+
+/* Sidebar */
+
+.Layout .VPSidebar {
+    background-color: var(--color-background);
+}
+
+.Layout .VPSidebar .curtain {
+    background-color: var(--color-background);
+}
+
+.Layout .VPSidebar .group {
+    border: 0;
+}
+
+.Layout .VPSidebar .VPSidebarItem .items {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.Layout .VPSidebar .VPSidebarItem h2.text {
+    color: var(--color-muted-foreground);
+    font-weight: 400;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.Layout .VPSidebarItem.level-1 .text {
+    color: var(--color-color-foreground);
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+}
+
+.Layout .VPSidebarItem.level-1.is-link > .item > .link:hover .text {
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+}
+
+.Layout .VPSidebarItem.level-1.is-active > .item .link > .text {
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+}
+
+.Layout .VPSidebarItem.level-0.has-active > .item > .text {
+    color: var(--color-muted-foreground);
+}
+
+/* End Sidebar */
+
+/* Aside */
+.Layout .VPDocAside .content {
+    border-left: 0;
+}
+
+.Layout .VPDocAside .content .outline-marker {
+    display: none;
+}
+
+.Layout .VPDocAside .content .outline-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-muted-foreground);
+}
+
+.Layout .VPDocAside .content .outline-link {
+    font-size: 12px;
+    color: var(--color-muted-foreground);
+}
+
+.Layout .VPDocAside .content .outline-link:hover {
+    color: var(--color-primary);
+}
+
+.Layout .VPDocAside .content .outline-link.active {
+    font-weight: 500;
+    color: var(--color-primary);
+}
+/* End Aside */
+
+.vp-doc h1,
+.vp-doc h2 {
+    font-family: var(--font-sans);
+    font-weight: 500;
+}
+
+.vp-doc h1 {
+    scroll-margin-top: 6rem;
+    font-size: 1.875rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.vp-doc p {
+    font-size: 15px;
+    letter-spacing: -0.025em;
+}
+
+.vp-doc ul li {
+    font-size: 15px;
+    letter-spacing: -0.025em;
+}
+
+.vp-doc .subtitle {
+    margin-top: 0.25rem; /* pull it up under the title */
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--vp-c-text-2); /* muted, so it's clearly secondary */
+    font-weight: 400;
+}
+
+.client-logo {
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    vertical-align: -0.25em;
+}
+.url-note {
+    font-size: 0.85rem;
+    color: var(--vp-c-text-2);
+    margin-top: -0.5rem;
+}
+
+.works-with {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+    opacity: 0.85;
+}
+.works-with img {
+    height: 32px;
+    width: auto;
+}
+.works-with-note {
+    text-align: center;
+    color: var(--vp-c-text-2);
+    font-size: 0.9rem;
+}
+
+.unofficial-banner {
+    max-width: 1152px;
+    margin: 1.5rem auto -1rem;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--vp-c-text-2);
+    background-color: var(--color-accent);
+}
+/* works-with strip, moved below features */
+.works-with {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0 0.5rem;
+}
+.works-with img {
+    height: 34px;
+    width: auto;
+}
+.works-with-note {
+    text-align: center;
+    color: var(--vp-c-text-2);
+    font-size: 0.9rem;
+}
