@@ -106,6 +106,9 @@ export default defineConfig({
       copyright: '© dlbcodes'
     }
   },
+  sitemap: {
+    hostname: 'https://oecd-mcp.com'
+  },
   vite: {
     plugins: [tailwindcss()],
   },
