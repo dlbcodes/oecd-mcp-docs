@@ -233,14 +233,19 @@
     font-size: 0.9rem;
 }
 
+.banner-wrap {
+    text-align: center; /* centers the inline-block badge */
+    margin: 1.5rem 0 0;
+}
 .unofficial-banner {
-    max-width: 1152px;
-    margin: 1.5rem auto -1rem;
-    padding: 0.5rem 1.5rem;
-    text-align: center;
-    font-size: 0.8rem;
+    display: inline-block; /* shrink to content — this is the key */
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px; /* pill */
+    font-size: 0.75rem;
+    font-weight: 500;
     color: var(--vp-c-text-2);
-    background-color: var(--color-accent);
+    background-color: var(--vp-c-bg-soft); /* subtle, not loud */
+    border: 1px solid var(--vp-c-divider);
 }
 /* works-with strip, moved below features */
 .works-with {
@@ -259,4 +264,128 @@
     text-align: center;
     color: var(--vp-c-text-2);
     font-size: 0.9rem;
+}
+
+.works-with-section {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 2rem 0rem 4rem 0rem;
+    text-align: center;
+}
+
+.works-with-section h2 {
+    border: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--vp-c-text-2);
+    margin: 0;
+}
+.works-with {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1.75rem 0 0.75rem;
+}
+
+/* .works-with-note {
+    color: var(--vp-c-text-2);
+    font-size: 0.9rem;
+} */
+
+.hero {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* from: leading-tighter text-3xl font-semibold tracking-tight text-balance
+   text-primary lg:leading-[1.1] xl:text-5xl xl:tracking-tighter max-w-4xl */
+.hero-title {
+    max-width: 56rem; /* max-w-4xl */
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 600; /* font-semibold */
+    line-height: 1.1; /* leading-tighter / lg:leading-[1.1] */
+    letter-spacing: -0.025em; /* tracking-tight */
+    text-wrap: balance; /* text-balance */
+    color: var(--vp-c-text-1); /* text-primary */
+    margin: 0;
+    border: 0; /* kill VitePress h1 underline/border */
+}
+@media (min-width: 1280px) {
+    /* xl: */
+    .hero-title {
+        font-size: 3rem; /* xl:text-5xl */
+        letter-spacing: -0.05em; /* xl:tracking-tighter */
+    }
+}
+
+/* from: max-w-4xl text-base text-balance text-foreground sm:text-lg */
+.hero-sub {
+    max-width: 56rem; /* max-w-4xl */
+    margin: 1.25rem 0 0;
+    font-size: 1rem; /* text-base */
+    text-wrap: balance; /* text-balance */
+    color: var(--vp-c-text-2); /* muted, reads as subtitle */
+}
+@media (min-width: 640px) {
+    /* sm: */
+    .hero-sub {
+        font-size: 1.125rem;
+    } /* sm:text-lg */
+}
+
+.hero-cta {
+    margin-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: var(--radius, 0.625rem);
+    background: var(--color-brand);
+    color: var(--color-brand-foreground);
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+}
+.hero-cta:hover {
+    opacity: 0.9;
+}
+
+/* badge as an eyebrow, tight above the title */
+.unofficial-banner {
+    display: inline-block;
+    margin-bottom: 1rem; /* small gap down to the title = "moustache" */
+    padding: 0.3rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--vp-c-text-2);
+    background-color: var(--vp-c-bg-soft);
+    border: 1px solid var(--vp-c-divider);
+}
+
+/* two-button row */
+.hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* secondary button — outlined, not filled */
+.hero-cta-alt {
+    background: transparent;
+    color: var(--vp-c-text-1);
+    border: 1px solid var(--vp-c-divider);
+}
+.hero-cta-alt:hover {
+    background: var(--vp-c-bg-soft);
+    opacity: 1;
 }
