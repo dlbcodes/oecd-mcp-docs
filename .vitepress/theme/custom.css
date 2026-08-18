@@ -360,7 +360,7 @@
 /* badge as an eyebrow, tight above the title */
 .unofficial-banner {
     display: inline-block;
-    margin-bottom: 1rem; /* small gap down to the title = "moustache" */
+    margin-bottom: 1rem;
     padding: 0.3rem 0.85rem;
     border-radius: 9999px;
     font-size: 0.72rem;

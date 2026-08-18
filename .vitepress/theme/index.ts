@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
+import { inject } from '@vercel/analytics'
 import './custom.css'
 
 export default {
@@ -42,5 +43,10 @@ export default {
 					]),
 				]),
 		})
+	},
+	enhanceApp() {
+		if (typeof window !== 'undefined') {
+			inject()
+		}
 	},
 }
