@@ -43,6 +43,7 @@ export default defineConfig({
       { text: 'Guide', link: '/guide/what-is-it' },
       { text: 'Tools', link: '/tools/' },
       { text: 'How it works', link: '/design/architecture' },
+      { text: 'Contact', link: '/contact' },
       { text: 'Try it', link: '/guide/getting-started' }
     ],
 
@@ -104,9 +105,9 @@ export default defineConfig({
     search: { provider: 'local' },
 
     footer: {
-      message: 'Not affiliated with the OECD. Data is retrieved live from the OECD SDMX API.',
+      message: 'Not affiliated with the OECD. Data is retrieved live from the OECD SDMX API. <a href="mailto:hello@oecd-mcp.com">Contact</a>',
       copyright: '© dlbcodes'
-    }
+    },
   },
   sitemap: {
     hostname: 'https://oecd-mcp.com'
