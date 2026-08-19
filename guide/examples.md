@@ -1,3 +1,7 @@
+---
+description: Plain-language and cross-dataset questions to ask — and how it behaves honestly when the data isn't available.
+---
+
 # Example questions
 
 Once [connected](/guide/getting-started), ask your assistant these in plain

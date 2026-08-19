@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import tailwindcss from '@tailwindcss/vite'
+import llmstxt from 'vitepress-plugin-llms'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,6 +8,7 @@ export default defineConfig({
   description: "Real OECD statistics for AI assistants, without hallucinated numbers",
   cleanUrls: true,
   lastUpdated: true,
+  srcExclude: ['**/development.md'],
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
@@ -110,6 +112,10 @@ export default defineConfig({
     hostname: 'https://oecd-mcp.com'
   },
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss(),
+    llmstxt({
+      ignoreFiles: ['development.md']
+    }),
+    ],
   },
 })

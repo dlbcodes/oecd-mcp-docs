@@ -1,3 +1,7 @@
+---
+description: How the server resolves a plain-language request to one exact SDMX series without hardcoding — availability-driven discovery, marginal vs joint narrowing.
+---
+
 # Architecture
 
 <p class="subtitle">How a plain-language question becomes one exact, verifiable OECD series — without hardcoding a single dataset.</p>

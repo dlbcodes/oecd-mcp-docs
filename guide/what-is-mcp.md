@@ -1,3 +1,7 @@
+---
+description: The Model Context Protocol, the open standard the server uses — why connecting is safe, established, and backed across the industry.
+---
+
 # What is MCP?
 
 <p class="subtitle">The open standard that lets your AI assistant connect to oecd-mcp — backed by the major AI companies, not by us.</p>

@@ -1,7 +1,19 @@
+---
+description: Run oecd-mcp locally, understand its layout, and contribute. (Not yet published — source repo is private.)
+llmstxt: false
+sitemap:
+    exclude: true
+head:
+    - - meta
+      - name: robots
+        content: noindex, nofollow
+---
+
 # Self-host & contribute
 
 ::: warning
-Fill in the repository URL and any deployment specifics before publishing.
+Not yet public — the source repository is private for now. This page is a draft;
+fill in the repository URL and deployment specifics before publishing.
 :::
 
 ## Run locally

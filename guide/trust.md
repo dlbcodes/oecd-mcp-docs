@@ -1,3 +1,7 @@
+---
+description: The three guarantees — never invents numbers, every figure verifiable, the unit travels with the number — plus the honest limits.
+---
+
 # Why trust it
 
 <p class="subtitle">Every number is fetched live, fully sourced, and honest when the data isn't there — so you can quote it.</p>

@@ -1,3 +1,7 @@
+---
+description: What oecd-mcp is, the problem it solves, and who it's for — real OECD data through your AI assistant, no SDMX knowledge needed.
+---
+
 # What is oecd-mcp?
 
 <p class="subtitle">Real OECD statistics for your AI assistant — sourced, verifiable, and honest when the data isn't there.</p>

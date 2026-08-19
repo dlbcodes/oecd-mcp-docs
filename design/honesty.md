@@ -1,3 +1,7 @@
+---
+description: The terminal, machine-readable failure responses that stop the assistant fabricating a number when data is absent.
+---
+
 # Honest failures
 
 <p class="subtitle">The tool's most important output isn't a number — it's a clear, machine-readable "no" that the assistant can't talk its way around.</p>

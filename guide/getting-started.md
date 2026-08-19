@@ -1,3 +1,7 @@
+---
+description: Add the remote MCP server to Claude, ChatGPT, Cursor, or Mistral Le Chat, and start asking in plain language. No installation.
+---
+
 <script setup>
 import { ref } from 'vue'
 const mcpUrl = import.meta.env.VITE_MCP_URL

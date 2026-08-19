@@ -1,3 +1,7 @@
+---
+description: The four tools — search_datasets, inspect_dataset, resolve_series, query_data — and the oecd://guide resource, and how they chain.
+---
+
 # Tools
 
 <p class="subtitle">Four tools and one resource. You rarely call them directly — the assistant chains them; this page is the map.</p>

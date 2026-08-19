@@ -1,3 +1,7 @@
+---
+description: A non-technical walkthrough of how a question becomes a sourced answer — find the dataset, resolve the series, fetch and label.
+---
+
 # How it works
 
 <p class="subtitle">Four steps turn a plain-language question into one sourced, verifiable number — no technical knowledge required.</p>
